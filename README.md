@@ -1,3 +1,7 @@
+# JL UPD: imported from:
+[https://github.com/sinanbekar/laravel-realtime-chat-app]
+(https://github.com/sinanbekar/laravel-realtime-chat-app)
+
 ### Laravel Real-time Chat App
 
 You can build yours from scratch with the following Medium article
@@ -6,7 +10,32 @@ You can build yours from scratch with the following Medium article
 
 In production demo app: [http://laravel-chat-app.ml/](http://laravel-chat-app.ml/)
 
+# JL UPD: more info can be found:
+[https://medium.com/@achalaarunalu/setting-up-an-existing-laravel-8-sail-docker-project-on-windows-wsl2-and-ubuntu-20-04-f0def4210258]
+(https://medium.com/@achalaarunalu/setting-up-an-existing-laravel-8-sail-docker-project-on-windows-wsl2-and-ubuntu-20-04-f0def4210258)
+
+# JL UPD: GIT token generate:
+[https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token]
+(https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
 #### Installation with Docker (Laravel Sail)
+
+# JL UPD: go to root user folder
+```bash
+cd ~
+```
+
+# JL UPD:
+```bash
+git clone https://github.com/egorlins/jl-laravel-realtime-chat-app.git
+```
+Username: your_username
+Password: your_token
+
+# JL UPD: go to root user folder
+```bash
+cd jl-laravel-realtime-chat-app
+```
 
 Install composer packages:
 ```bash
@@ -23,47 +52,52 @@ Create .env:
 cp .env.example .env
 ```
 
-Sail up:
-
+# JL UPD: go to root user folder
 ```bash
-./vendor/bin/sail up -d
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 ```
 
-Generate app key:
-
+# JL UPD: Sail up detatched (-d):
 ```bash
-./vendor/bin/sail artisan key:generate
+sail up -d
 ```
 
-Clean cache and migrate:
-
+# JL UPD: Generate app key:
 ```bash
-./vendor/bin/sail artisan cache:clear && ./vendor/bin/sail artisan migrate
+sail artisan key:generate
 ```
 
-Run tinker:
+# JL UPD: Clean cache and migrate:
 ```bash
-./vendor/bin/sail artisan tinker
+sail artisan cache:clear && sail artisan migrate
+```
+
+# JL UPD: Run tinker:
+```bash
+sail artisan tinker
 ```
 
 Create users and rooms:
-
 ```php
 \App\Models\User::factory(5)->create();
 ```
 
+# JL UPD: 
 ```php
 DB::table('rooms')->insert(array_map(function ($room) {
             return ['name' => $room];
         }, ['general', 'room1', 'room2', 'room3', 'room4']));
-}
 ```
 
-Install npm packages and compile assets:
+# JL UPD: CTRL+C
 
+# JL UPD: Install npm packages and compile assets:
 ```bash
-npm install && npm run dev
+sail npm install && sail npm run dev
 ```
-
 
 You can access the chat page by visiting http://localhost/chat after login.
+
+# JL UPD: user can be taken from output of cmd "\App\Models\User::factory(5)->create();"
+Username: generated email
+Password: password
