@@ -100,3 +100,34 @@ You can access the chat page by visiting http://localhost/chat after login.
 Username: generated email
 
 Password: password
+
+## run VSCode:
+```bash
+code .
+```
+
+## Testing:
+```bash
+sail php artisan test
+```
+## Development:
+#### On changes in js code we have to rebuld mix
+```bash
+sail npm run dev
+```
+
+creating StatsController
+```bash
+sail artisan make:controller StatsController
+```
+Update \app\Http\Controllers\StatsController.php
+
+Add Stats.js into \resources\js\Components
+
+Add Stats.js into \resources\js\Pages
+
+Update \routes\web.php to have stats in the route
+
+Update \resources\js\Layouts\Authenticated.js to have one more menu item
+
+
