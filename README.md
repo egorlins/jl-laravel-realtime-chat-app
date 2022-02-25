@@ -1,6 +1,5 @@
 #### JL UPD: imported from:
-[https://github.com/sinanbekar/laravel-realtime-chat-app]
-(https://github.com/sinanbekar/laravel-realtime-chat-app)
+[https://github.com/sinanbekar/laravel-realtime-chat-app](https://github.com/sinanbekar/laravel-realtime-chat-app)
 
 ## Laravel Real-time Chat App
 
@@ -11,12 +10,10 @@ You can build yours from scratch with the following Medium article
 In production demo app: [http://laravel-chat-app.ml/](http://laravel-chat-app.ml/)
 
 #### JL UPD: more info can be found:
-[https://medium.com/@achalaarunalu/setting-up-an-existing-laravel-8-sail-docker-project-on-windows-wsl2-and-ubuntu-20-04-f0def4210258]
-(https://medium.com/@achalaarunalu/setting-up-an-existing-laravel-8-sail-docker-project-on-windows-wsl2-and-ubuntu-20-04-f0def4210258)
+[https://medium.com/@achalaarunalu/setting-up-an-existing-laravel-8-sail-docker-project-on-windows-wsl2-and-ubuntu-20-04-f0def4210258](https://medium.com/@achalaarunalu/setting-up-an-existing-laravel-8-sail-docker-project-on-windows-wsl2-and-ubuntu-20-04-f0def4210258)
 
 #### JL UPD: GIT token generate:
-[https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token]
-(https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+[https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
 ### Installation with Docker (Laravel Sail)
 
@@ -30,6 +27,7 @@ cd ~
 git clone https://github.com/egorlins/jl-laravel-realtime-chat-app.git
 ```
 Username: your_username
+
 Password: your_token
 
 #### JL UPD: go to root user folder
@@ -100,4 +98,5 @@ You can access the chat page by visiting http://localhost/chat after login.
 
 #### JL UPD: user can be taken from output of cmd "\App\Models\User::factory(5)->create();"
 Username: generated email
+
 Password: password
