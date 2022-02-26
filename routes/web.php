@@ -4,6 +4,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\ChatsController;
+use App\Http\Controllers\StatsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,5 +35,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/message', [ChatsController::class, 'sendMessage'])->name('message');
 });
 
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/stats/{user?}',  [StatsController::class, 'renderStats'])->name('stats');
+});
 
 require __DIR__ . '/auth.php';
