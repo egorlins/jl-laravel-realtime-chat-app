@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Room extends Model
 {
     use HasFactory;
+    
+    public $timestamps = false;
 
     protected $fillable = ['name'];
     public function messages()
