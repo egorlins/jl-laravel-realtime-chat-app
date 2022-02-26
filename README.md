@@ -106,7 +106,7 @@ Password: password
 code .
 ```
 
-## Testing:
+## Testing NB! tests deleting DB rows! It is needed to create users and rooms once again to use chat.:
 ```bash
 sail php artisan test
 ```
